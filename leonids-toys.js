@@ -67,11 +67,11 @@ const gameboy = {
     quantity: 10 
 }
 
-const skates = {
+const skateboard = {
 
     id:5,
     make: "Hawk",
-    name: "Skates",
+    name: "Skateboard",
     color: "grey",
     price: 79.99,
     weight: 2.2,
@@ -81,18 +81,23 @@ const skates = {
     quantity: 14
 }
 
-toys.push(gameboy, skates)
+toys.push(gameboy, skateboard)
 
 
-console.log(toys)
 
 for (const toy of toys) {
-    console.log(`The ${toy.make} ${toy.name} cost ${toy.price}.`) 
+    console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`) 
 }
 
 // This section raises tbe price of the toys via loop
 
+console.log(toys)
 for (const toy of toys) {
-    toy.price = toy.price + (toy.price * .25)
+    toy.price = toy.price + (toy.price * .05)
+
+console.log(`The ${toy.make} ${toy.name} is now priced at $${toy.price.toFixed(2)}.`) 
+
 }
-console.log(`The ${toy.make} ${toy.name} is now priced at ${toy.price}.`) 
+
+// This section is finding a item by id then displaying that items data
+
