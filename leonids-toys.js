@@ -1,9 +1,8 @@
 // this is the master toys list
 
-const toys =[
-
- {
-    id:1,
+const toys = [
+  {
+    id: 1,
     make: "Sony",
     name: "Playstation",
     color: "black",
@@ -12,11 +11,11 @@ const toys =[
     height: 10,
     width: 5,
     length: 13,
-    quantity: 5
-},
+    quantity: 5,
+  },
 
-{
-    id:2,
+  {
+    id: 2,
     make: "Microsoft",
     name: "X-box",
     color: "black",
@@ -25,11 +24,11 @@ const toys =[
     height: 10,
     width: 5,
     length: 13,
-    quantity: 23
-},
+    quantity: 23,
+  },
 
- {
-    id:3,
+  {
+    id: 3,
     make: "Wilson",
     name: "Basketball",
     color: "orange",
@@ -37,79 +36,106 @@ const toys =[
     weight: 3.2,
     height: 10,
     width: 5,
-    length: 13, 
-    quantity: 23
-}
-]
+    length: 13,
+    quantity: 23,
+  },
+];
 
 // Consoles list of toys
-console.log(toys) ;
+console.log(toys);
 
 // this loop goes thru list of Toys and console.logs the current price
 for (const toy of toys) {
-    console.log(`${toy.name} is currently on sale for $${toy.price}.`) ;
+  console.log(`${toy.name} is currently on sale for $${toy.price}.`);
 }
-
 
 // This section is for .push method to add new items to the toys array
 
 const gameboy = {
-
-    id:4,
-    make: "Nintendo",
-    name: "Gameboy",
-    color: "grey",
-    price: 99.99,
-    weight: 2.2,
-    height: 8,
-    width: 4,
-    length: 13, 
-    quantity: 10 
-}
+  id: 4,
+  make: "Nintendo",
+  name: "Gameboy",
+  color: "grey",
+  price: 99.99,
+  weight: 2.2,
+  height: 8,
+  width: 4,
+  length: 13,
+  quantity: 10,
+};
 
 const skateboard = {
+  id: 5,
+  make: "Hawk",
+  name: "Skateboard",
+  color: "grey",
+  price: 79.99,
+  weight: 2.2,
+  height: 12,
+  width: 5,
+  length: 13,
+  quantity: 14,
+};
 
-    id:5,
-    make: "Hawk",
-    name: "Skateboard",
-    color: "grey",
-    price: 79.99,
-    weight: 2.2,
-    height: 12,
-    width: 5,
-    length: 13, 
-    quantity: 14
-}
-
-toys.push(gameboy, skateboard) ;
-
-
+toys.push(gameboy, skateboard);
 
 for (const toy of toys) {
-    console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`) ;
+  console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`);
 }
 
 // This section raises tbe price of the toys via loop
 
-console.log(toys) ;
+console.log(toys);
 
 for (const toy of toys) {
-    toy.price = toy.price + (toy.price * .05) ;
+  toy.price = toy.price + toy.price * 0.05;
 
-console.log(`The ${toy.make} ${toy.name} is now priced at $${toy.price.toFixed(2)}.`) ;
-
+  console.log(
+    `The ${toy.make} ${toy.name} is now priced at $${toy.price.toFixed(2)}.`
+  );
 }
 
 // This section is finding a item by id then displaying that items data
 
-const toyToFind = 1 ;
+// const toyToFind = 1;
 
-for (const toy of toys) {
-    if (toy.id === toyToFind) {
-        console.log(`There are currently ${toy.quantity} ${toy.make} ${toy.name}s in stock.`) ;
-    }
-}
+// for (const toy of toys) {
+//   if (toy.id === toyToFind) {
+//     console.log(
+//       `There are currently ${toy.quantity} ${toy.make} ${toy.name}s in stock.`
+//     );
+//   }
+// }
 
 // This section adds an increasing unique id to the new items added to the list
 
+const bike = {
+  make: "Treck",
+  name: "Bike",
+  color: "grey",
+  price: 379.99,
+  weight: 6.2,
+  height: 34,
+  width: 24,
+  length: 45,
+  quantity: 3,
+};
 
+const addToy = (toyObject) => {
+  const lastIndex = toys.length - 1;
+  const currentLastToy = toys[lastIndex];
+  const maxId = currentLastToy.id;
+  const idForNewToy = maxId + 1;
+
+  bike.id = idForNewToy;
+  toys.push(toyObject);
+};
+
+addToy(bike);
+
+for (const toy of toys) {
+  console.log(
+    `The ${toy.make} ${toy.name} cost $${toy.price} dollars. It weighs ${toy.weight} lbs. Toy Id ${toy.id}`
+  );
+}
+ console.log(toys)
