@@ -87,6 +87,6 @@ toys.push(gameboy, skates)
 console.log(toys)
 
 for (const toy of toys) {
-    console.log(`The ${toy.make} ${toy.name} cost ${toy.price}`) 
+    console.log(`The ${toy.make} ${toy.name} cost ${toy.price}.`) 
 }
 
