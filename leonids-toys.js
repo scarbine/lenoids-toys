@@ -43,11 +43,11 @@ const toys =[
 ]
 
 // Consoles list of toys
-console.log(toys);
+console.log(toys) ;
 
 // this loop goes thru list of Toys and console.logs the current price
 for (const toy of toys) {
-    console.log(`${toy.name} is currently on sale for $${toy.price}.`)
+    console.log(`${toy.name} is currently on sale for $${toy.price}.`) ;
 }
 
 
@@ -81,23 +81,35 @@ const skateboard = {
     quantity: 14
 }
 
-toys.push(gameboy, skateboard)
+toys.push(gameboy, skateboard) ;
 
 
 
 for (const toy of toys) {
-    console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`) 
+    console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`) ;
 }
 
 // This section raises tbe price of the toys via loop
 
-console.log(toys)
-for (const toy of toys) {
-    toy.price = toy.price + (toy.price * .05)
+console.log(toys) ;
 
-console.log(`The ${toy.make} ${toy.name} is now priced at $${toy.price.toFixed(2)}.`) 
+for (const toy of toys) {
+    toy.price = toy.price + (toy.price * .05) ;
+
+console.log(`The ${toy.make} ${toy.name} is now priced at $${toy.price.toFixed(2)}.`) ;
 
 }
 
 // This section is finding a item by id then displaying that items data
+
+const toyToFind = 1 ;
+
+for (const toy of toys) {
+    if (toy.id === toyToFind) {
+        console.log(`There are currently ${toy.quantity} ${toy.make} ${toy.name}s in stock.`) ;
+    }
+}
+
+// This section adds an increasing unique id to the new items added to the list
+
 
