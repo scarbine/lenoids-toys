@@ -90,3 +90,9 @@ for (const toy of toys) {
     console.log(`The ${toy.make} ${toy.name} cost ${toy.price}.`) 
 }
 
+// This section raises tbe price of the toys via loop
+
+for (const toy of toys) {
+    toy.price = toy.price + (toy.price * .25)
+}
+console.log(`The ${toy.make} ${toy.name} is now priced at ${toy.price}.`) 
