@@ -158,3 +158,32 @@ const removeProduct = (id) => {
 removeProduct(3)
 console.log(toys)
 
+// The Perry Scope
+
+const currentInventory = [
+  "Muscle Man",
+  "Dora the Scientist",
+  "Princess Sparkles",
+  "Perry Scope",
+  "Explorer Backpack",
+  "Space Scout Suit",
+  "Geology Mineral Dig Kit",
+  "Perry Scope"
+]
+
+const sellPerryScope = () => {
+  let availableForPurchase = false
+
+  for (const toy of currentInventory) {
+    
+    if (toy === "Perry Scope") {
+       availableForPurchase = true
+    }
+  }
+
+  if (availableForPurchase === true) {
+      console.log("Enjoy your new Perry Scope")
+  }
+}
+
+sellPerryScope()gti 
