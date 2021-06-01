@@ -186,4 +186,4 @@ const sellPerryScope = () => {
   }
 }
 
-sellPerryScope()gti 
+sellPerryScope()
