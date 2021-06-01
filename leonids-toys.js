@@ -42,12 +42,12 @@ const toys = [
 ];
 
 // Consoles list of toys
-console.log(toys);
+// console.log(toys);
 
 // this loop goes thru list of Toys and console.logs the current price
-for (const toy of toys) {
-  console.log(`${toy.name} is currently on sale for $${toy.price}.`);
-}
+// for (const toy of toys) {
+//   console.log(`${toy.name} is currently on sale for $${toy.price}.`);
+// }
 
 // This section is for .push method to add new items to the toys array
 
@@ -79,13 +79,13 @@ const skateboard = {
 
 toys.push(gameboy, skateboard);
 
-for (const toy of toys) {
-  console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`);
-}
+// for (const toy of toys) {
+//   console.log(`The ${toy.make} ${toy.name} was $${toy.price}.`);
+// }
 
 // This section raises tbe price of the toys via loop
 
-console.log(toys);
+// console.log(toys);
 
 for (const toy of toys) {
   toy.price = toy.price + toy.price * 0.05;
@@ -138,4 +138,23 @@ for (const toy of toys) {
     `The ${toy.make} ${toy.name} cost $${toy.price} dollars. It weighs ${toy.weight} lbs. Toy Id ${toy.id}`
   );
 }
- console.log(toys)
+//  console.log(toys)
+
+
+//  This function removes a toy from the list when it has been discontinued
+
+const removeProduct = (id) => {
+
+
+
+  for (const toy of toys){
+    if (id === toy.id){
+      const indexPosition = toys.indexOf(toy)
+      toys.splice(indexPosition , 1)
+      return
+    }
+  }
+}
+removeProduct(3)
+console.log(toys)
+
